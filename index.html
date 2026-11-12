@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNAPSE // Next-Gen Cloud & AI Infrastructure</title>
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-dot"></span> SYNAPSE
+    </div>
+    <nav>
+      <a href="#platform">Platform</a>
+      <a href="#sandbox">API Sandbox</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn-ghost" id="openDemoBtn">Book Demo</button>
+      <a href="#pricing" class="btn-blue">Start Free</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="announcement-pill">NEW &bull; SYNAPSE ENGINE V4.2 NOW LIVE</div>
+    <h1>Deploy AI Agents at<br><span>Global Edge Speed.</span></h1>
+    <p>Low-latency vector search, serverless GPU clusters, and enterprise-grade security built for modern engineering teams.</p>
+    <div class="hero-cta">
+      <a href="#sandbox" class="btn-blue">Test Live API</a>
+      <a href="#platform" class="btn-ghost">Explore Architecture</a>
+    </div>
+
+    <div class="metrics-strip">
+      <div class="metric">
+        <strong>99.99%</strong>
+        <span>UPTIME SLA</span>
+      </div>
+      <div class="metric">
+        <strong>&lt; 14ms</strong>
+        <span>GLOBAL LATENCY</span>
+      </div>
+      <div class="metric">
+        <strong>40+</strong>
+        <span>EDGE REGIONS</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Core Tech Features -->
+    <section id="platform" class="container">
+      <div class="section-header">
+        <h2>ENGINEERED FOR SCALE</h2>
+        <p>Everything you need to take intelligent applications from prototype to millions of users.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="tech-card">
+          <div class="icon-box">01</div>
+          <h3>Serverless GPU Inference</h3>
+          <p>Auto-scaling compute nodes that spin up in 80 milliseconds and scale to zero when idle.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="icon-box">02</div>
+          <h3>Real-Time Vector Memory</h3>
+          <p>Hybrid semantic and keyword indexing across billions of embeddings with zero maintenance.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="icon-box">03</div>
+          <h3>Zero-Trust Encryption</h3>
+          <p>SOC2 Type II certified pipelines with hardware-isolated tenant environments and RBAC.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live API Playground -->
+    <section id="sandbox" class="container">
+      <div class="section-header">
+        <h2>INTERACTIVE API SANDBOX</h2>
+        <p>Select an endpoint and execute a live simulated request directly in your browser.</p>
+      </div>
+
+      <div class="sandbox-box">
+        <div class="sandbox-controls">
+          <div class="endpoint-tabs">
+            <button class="ep-btn active" data-ep="summarize">POST /v1/summarize</button>
+            <button class="ep-btn" data-ep="embed">POST /v1/embeddings</button>
+            <button class="ep-btn" data-ep="vision">POST /v1/vision-scan</button>
+          </div>
+          <button class="btn-blue" id="runApiBtn">Run Request &#9654;</button>
+        </div>
+
+        <div class="code-panels">
+          <div class="panel">
+            <div class="panel-title">REQUEST PAYLOAD (JSON)</div>
+            <pre id="requestPreview">{
+  "model": "synapse-turbo-4",
+  "input": "Analyze Q3 cloud infrastructure latency metrics.",
+  "max_tokens": 128
+}</pre>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title">
+              <span>LIVE RESPONSE</span>
+              <span class="status-ok" id="statusBadge">200 OK &bull; 12ms</span>
+            </div>
+            <pre id="responseOutput">// Click "Run Request" to test endpoint...</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing with Billing Toggle -->
+    <section id="pricing" class="container">
+      <div class="section-header center-head">
+        <h2>TRANSPARENT PRICING</h2>
+        <p>Start building for free. Upgrade seamlessly as your traffic grows.</p>
+
+        <div class="billing-toggle">
+          <span>Monthly</span>
+          <label class="switch">
+            <input type="checkbox" id="billingSwitch">
+            <span class="slider"></span>
+          </label>
+          <span>Annual <small class="save-badge">SAVE 20%</small></span>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="plan-name">DEVELOPER</div>
+          <div class="plan-price">$<span class="price-val" data-monthly="0" data-annual="0">0</span><small>/mo</small></div>
+          <p class="plan-desc">For side projects, hackathons, and early prototyping.</p>
+          <ul>
+            <li>100,000 API requests / month</li>
+            <li>Shared GPU inference cluster</li>
+            <li>Community Discord support</li>
+          </ul>
+          <button class="btn-ghost full-w" onclick="alert('Developer API Key generated!')">Get Free API Key</button>
+        </div>
+
+        <div class="price-card pro-card">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div class="plan-name">PRO SCALE</div>
+          <div class="plan-price">$<span class="price-val" data-monthly="49" data-annual="39">49</span><small>/mo</small></div>
+          <p class="plan-desc">For production apps needing low latency and high throughput.</p>
+          <ul>
+            <li>5,000,000 API requests / month</li>
+            <li>Dedicated edge caching nodes</li>
+            <li>99.99% Uptime SLA & Priority Support</li>
+          </ul>
+          <button class="btn-blue full-w" onclick="alert('Pro Scale 14-day trial activated!')">Start 14-Day Trial</button>
+        </div>
+
+        <div class="price-card">
+          <div class="plan-name">ENTERPRISE</div>
+          <div class="plan-price">$<span class="price-val" data-monthly="299" data-annual="239">299</span><small>/mo</small></div>
+          <p class="plan-desc">Custom models, VPC peering, and dedicated engineering.</p>
+          <ul>
+            <li>Unlimited custom model deployments</li>
+            <li>HIPAA & SOC2 Type II compliance</li>
+            <li>24/7 dedicated solutions architect</li>
+          </ul>
+          <button class="btn-ghost full-w" id="enterpriseBtn">Contact Sales</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SYNAPSE TECHNOLOGIES INC. ALL SYSTEMS OPERATIONAL.</p>
+  </footer>
+
+  <!-- Interactive Demo Modal -->
+  <div class="modal" id="demoModal">
+    <div class="modal-card">
+      <h3>SCHEDULE ARCHITECTURE DEMO</h3>
+      <p>Connect with a Synapse solutions engineer to review your infrastructure needs.</p>
+      <form id="demoForm">
+        <input type="email" placeholder="Work email (e.g. alex@company.com)" required>
+        <input type="text" placeholder="Company / Project Name" required>
+        <div class="modal-btns">
+          <button type="submit" class="btn-blue">Request Demo</button>
+          <button type="button" class="btn-ghost" id="closeDemoBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
